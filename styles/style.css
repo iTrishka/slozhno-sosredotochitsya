@@ -2,4 +2,115 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  position: relative;
+  font-family: var(--font-family, sans-serif);
+  font-size: var(--font-size);
+  background-image: var(--background-image);
+  background-attachment: fixed;
 }
+
+.title-decor {
+  background-color: var(--accent-color);
+}
+
+
+/*Уголки*/
+.decorated-zone::before,
+.decorated-zone::after {
+    position: absolute; 
+    content:' ';
+    width: 25px; height: 25px;
+    border-color: var(--accent-color); 
+    border-style: solid;
+    margin: 10px; 
+}
+
+.decorated-zone::before {
+  top:0;
+  right:0;
+  border-width: 1px 1px 0 0;
+}
+
+.decorated-zone::after {
+  bottom: 0;
+  left: 0;
+  border-width:  0 0 1px 1px; 
+}
+
+
+/*header*/
+
+.header {
+  min-height: 668px;
+  position: relative;
+  padding: var(--wrapper-padding);
+  background-image: var(--background-image);
+  display: grid;  
+}
+
+.header__record {
+  justify-self: end;
+}
+
+.header__theme-menu {
+  justify-self: end;
+}
+
+.header__record::before {
+  content: "REC";
+  color: var(--accent-color);
+  font-weight: var(--font-weight-regular);
+  line-height: 25px;
+  font-style: normal;
+  justify-items: end;
+}
+
+.header__record::after {
+  content: "";
+  display: inline-block;
+  margin-inline-start: 10px;
+  margin-inline-end: 9px;
+  margin-block-end: 1px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  box-shadow: 0px 0px 4px var(--accent-color);
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.header__theme-menu-button{
+  background-color: transparent;
+  border: none;
+  color: var(--accent-color);
+  text-transform: lowercase;
+  padding: 0 13px;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--accent-color);
+}
+
+.header__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--accent-color-2);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  line-height: 82.5%;
+}
+
+.header__subtitle {
+  width: clamp(355px, 491px);
+  color: var(--accent-color-3);
+  font-weight: var(--font-weight-bold);
+  align-self: baseline;
+}
+
+.header__subtitle>span {
+  display: block;
+}
+
