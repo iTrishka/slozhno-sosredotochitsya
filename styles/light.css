@@ -26,8 +26,7 @@
 
 .header__theme-menu-button:hover {
   outline: 1px solid rgba(50, 49, 45, 0.40);
-  cursor: pointer;
-  
+  cursor: pointer; 
 }
 
 .header__theme-menu-button:focus {
@@ -37,7 +36,7 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    /* Дублируем переменные светлой темы */    
+    /* Дублируем переменные светлой темы */
         --header-color: #FFC2E6;
         --main-text-color: #353430;
         --accent-text-color: var(--main-text-color);
