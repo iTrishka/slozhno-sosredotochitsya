@@ -12,11 +12,11 @@
     чем стили в медиазапросе предпочтений пользователя
   */
     --header-color: #FFC2E6;
-    --main-text-color: #353430; 
-    --accent-text-color: #353430; 
-    --accent-color-v2: #353430; 
-    --accent-color: #FF0070; 
-    --background-color: #FF8DCB; 
+    --main-text-color: #353430;
+    --accent-text-color: #353430;
+    --accent-color-v2: #353430;
+    --accent-color: #FF0070;
+    --background-color: #FF8DCB;
     --background-image: url(../images/cover-image-light.png);
 }
 
@@ -37,13 +37,13 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-        /* Дублируем переменные светлой темы */    
+    /* Дублируем переменные светлой темы */    
         --header-color: #FFC2E6;
-        --main-text-color: #353430; 
-        --accent-text-color: var(--main-text-color); 
-        --accent-color-v2: var(--main-text-color); 
-        --accent-color: #FF0070; 
-        --background-color: #FF8DCB; 
+        --main-text-color: #353430;
+        --accent-text-color: var(--main-text-color);
+        --accent-color-v2: var(--main-text-color);
+        --accent-color: #FF0070;
+        --background-color: #FF8DCB;
         --background-image: url(../images/cover-image-light.png);
     }
 }

@@ -16,7 +16,7 @@
 
 a {
   color: var(--main-text-color);
-  text-shadow: 2px 2px 0px #FF0070;;
+  text-shadow: 2px 2px 0px #FF0070;
   font-family: inherit;
   font-size: inherit;
   font-style: var(--font-weight-regular);
@@ -37,7 +37,7 @@ a:focus {
   margin-bottom: 40px;
 }
 
-.wrapper{
+.wrapper {
   padding: 0 var(--wrapper-padding);
 }
 
@@ -53,12 +53,12 @@ a:focus {
 
 .decorated-zone::before,
 .decorated-zone::after {
-    position: absolute; 
+    position: absolute;
     content:' ';
     width: 25px; height: 25px;
-    border-color: var(--accent-color-v2); 
+    border-color: var(--accent-color-v2);
     border-style: solid;
-    margin: 10px; 
+    margin: 10px;
 }
 
 .decorated-zone::before {
@@ -70,19 +70,17 @@ a:focus {
 .decorated-zone::after {
   bottom: 0;
   left: 0;
-  border-width:  0 0 1px 1px; 
+  border-width:   0 0 1px 1px;
 }
 
 
 /*header*/
 
 .header {
-  /* padding: var(--wrapper-padding); */
   min-height: 668px;
   background-image: var(--background-image);
   display: grid;
   grid-template-rows: 1fr 0.8fr 1fr;
-  /* gap: 55px; */
 }
 
 .header__record {
@@ -130,10 +128,9 @@ a:focus {
   gap: 10px;
 }
 
-.header__theme-menu-button{
+.header__theme-menu-button {
   flex-shrink: 0;
   background-color: transparent;
-  border: none;
   color: var(--accent-color-v2);
   text-transform: lowercase;
   font-size: inherit;
@@ -185,10 +182,10 @@ a:focus {
   gap: 50px
 }
 
-.heading{
+.heading {
   color: var(--accent-color-v2); 
   font-size: inherit;
-  line-height: 131%; 
+  line-height: 131%;
   padding-bottom: 20px;
 }
 
@@ -206,10 +203,6 @@ a:focus {
   gap: 20px
 }
 
-/* .card-list-item {
-  margin-bottom: 20px;
-} */
-
 .card__title {
   color: var(--accent-text-color);
   font-size: inherit;
@@ -222,7 +215,7 @@ a:focus {
   color: var(--main-text-color);
   font-size: inherit;
   font-weight: var(--font-weight-regular);
-  line-height: 130%; 
+  line-height: 130%;
 }
 
 .raise-focus__card-list {
@@ -342,9 +335,6 @@ a:focus {
   /*галерея*/
   .gallery__image-list {
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  .gallery__image-list {
     gap: 20px;
     padding-top: 10px;
   }
@@ -368,12 +358,6 @@ a:focus {
   .footer {
     grid-template-rows: min(1024px);
   }
-
-}
-
-
-@media (768px <= width < 1024px) {
-  
 }
 
 @media (width >= 1024px) {
