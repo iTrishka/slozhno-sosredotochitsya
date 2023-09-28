@@ -153,7 +153,7 @@ a:focus-visible {
   cursor: pointer;
 }
 
-.header__theme-menu-button:focus-visible{
+.header__theme-menu-button:focus-visible {
   outline: 1px solid #ff007066;
 }
 

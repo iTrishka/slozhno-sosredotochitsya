@@ -34,7 +34,7 @@
   cursor: pointer;
 }
 
-.page.theme_light .header__theme-menu-button:focus-visible{
+.page.theme_light .header__theme-menu-button:focus-visible {
   outline: 1px solid #32312d66;
 }
 

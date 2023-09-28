@@ -32,7 +32,7 @@
   cursor: pointer;
 }
 
-.page.theme_dark .header__theme-menu-button:focus-visible{
+.page.theme_dark .header__theme-menu-button:focus-visible {
   outline: 1px solid #ff007066;
 }
 
