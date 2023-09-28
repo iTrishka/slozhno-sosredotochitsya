@@ -24,6 +24,17 @@
   visibility: hidden;
 }
 
+.header__theme-menu-button:hover {
+  outline: 1px solid rgba(50, 49, 45, 0.40);
+  cursor: pointer;
+  
+}
+
+.header__theme-menu-button:focus {
+  border-bottom: 1px solid rgba(50, 49, 45, 0.40);
+  cursor: pointer;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
         /* Дублируем переменные светлой темы */    
