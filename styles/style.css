@@ -8,7 +8,7 @@
   font-style: normal;
   background-image: var(--background-image);
   background-attachment: fixed;
-
+  background-size: cover;
   display: grid;
   justify-content: center;
   grid-template-columns: minmax(375px, 1024px);
@@ -29,6 +29,12 @@ a:hover {
 }
 
 a:focus {
+  border: 1px solid var(--main-text-color);
+  outline: none;
+}
+
+a:focus-visible {
+  border: none;
   outline: 1px solid var(--main-text-color);
 }
 
@@ -138,17 +144,26 @@ a:focus {
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid rgba(255, 0, 112, 0.40);
+  outline: 1px solid #ff007066;
   cursor: pointer;
 }
 
 .header__theme-menu-button:focus {
-  border-bottom: 1px solid rgba(255, 0, 112, 0.40);
+  border-bottom: 1px solid #ff007066;
   cursor: pointer;
+}
+
+.header__theme-menu-button:focus-visible{
+  outline: 1px solid #ff007066;
 }
 
 .header__theme-menu-button_active {
   outline: 1px solid var(--accent-color-v2);
+}
+
+.header__theme-menu-button_active:hover {
+  outline: 1px solid var(--accent-color-v2);
+  cursor: default;
 }
 
 .header__title {
@@ -220,7 +235,6 @@ a:focus {
   gap: 10px;
 }
 
-
 /*Блок с картинками*/
 
 .raise-focus-images__card-list {
@@ -265,7 +279,7 @@ a:focus {
 }
 
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   .header,
   .main {
      margin-bottom: 60px;

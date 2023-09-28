@@ -21,3 +21,22 @@
   --font-weight-regular: 400;
   --font-weight-bold: 700;
 }
+
+.page.theme_dark .page.theme_light .header__theme-menu-button:hover {
+  outline: 1px solid #32312d66;
+  cursor: pointer;
+}
+
+.page.theme_dark .page.theme_light .header__theme-menu-button:focus {
+  border-bottom: 1px solid #32312d66;
+  cursor: pointer;
+}
+
+.page.theme_dark .header__theme-menu-button:focus-visible{
+  outline: 1px solid #ff007066;
+}
+
+.page.theme_dark .header__theme-menu-button_active:hover {
+  outline: 1px solid var(--accent-color-v2);
+  cursor: default;
+}
