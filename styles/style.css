@@ -1,9 +1,8 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   position: relative;
-  font-family: var(--font-family, sans-serif);
+  font-family: var(--font-family, monospace);
   font-size: var(--font-size);
   font-style: normal;
   background-image: var(--background-image);
@@ -12,30 +11,6 @@
   display: grid;
   justify-content: center;
   grid-template-columns: minmax(375px, 1024px);
-}
-
-a {
-  color: var(--main-text-color);
-  text-shadow: 2px 2px 0px #FF0070;
-  font-family: inherit;
-  font-size: inherit;
-  font-style: var(--font-weight-regular);
-  line-height: 23.4px; /* 130% */
-  text-decoration: none;
-}
-
-a:hover {
-  border-bottom: 1px solid var(--main-text-color);
-}
-
-a:focus {
-  border: 1px solid var(--main-text-color);
-  outline: none;
-}
-
-a:focus-visible {
-  border: none;
-  outline: 1px solid var(--main-text-color);
 }
 
 .header,
@@ -51,7 +26,6 @@ a:focus-visible {
   background-color: var(--background-color);
 }
 
-
 /*Уголки*/
 .decorated-zone {
   position: relative;
@@ -59,30 +33,28 @@ a:focus-visible {
 
 .decorated-zone::before,
 .decorated-zone::after {
-    position: absolute;
-    content:' ';
-    width: 25px;
-    height: 25px;
-    border-color: var(--accent-color-v2);
-    border-style: solid;
-    margin: 10px;
+  position: absolute;
+  content: " ";
+  width: 25px;
+  height: 25px;
+  border-color: var(--accent-color-v2);
+  border-style: solid;
+  margin: 10px;
 }
 
 .decorated-zone::before {
-  top:0;
-  right:0;
+  top: 0;
+  right: 0;
   border-width: 1px 1px 0 0;
 }
 
 .decorated-zone::after {
   bottom: 0;
   left: 0;
-  border-width:   0 0 1px 1px;
+  border-width: 0 0 1px 1px;
 }
 
-
 /*header*/
-
 .header {
   min-height: 668px;
   background-image: var(--background-image);
@@ -108,7 +80,7 @@ a:focus-visible {
   color: var(--accent-color);
   font-weight: var(--font-weight-regular);
   line-height: 25px;
-  font-style: normal;
+  font-style: inherit;
   justify-items: end;
 }
 
@@ -175,7 +147,8 @@ a:focus-visible {
 }
 
 .header__subtitle {
-  width: min(100%, 364px);
+  max-width: 364px;
+  width: 100%;
   color: var(--accent-text-color);
   font-weight: var(--font-weight-bold);
   align-self: start;
@@ -183,16 +156,15 @@ a:focus-visible {
   margin-top: 55px;
 }
 
-.header__subtitle>span {
+.header__subtitle > span {
   display: block;
 }
 
 /*main content*/
-
 .main {
   display: flex;
   flex-direction: column;
-  gap: 50px
+  gap: 50px;
 }
 
 .heading {
@@ -210,10 +182,34 @@ a:focus-visible {
   margin-bottom: 10px;
 }
 
+/*ссылки*/
+.link {
+  color: var(--main-text-color);
+  text-shadow: 2px 2px 0px #ff0070;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  line-height: 23.4px; /* 130% */
+  text-decoration: none;
+}
+
+.link:hover {
+  border-bottom: 1px solid var(--main-text-color);
+}
+
+.link:focus {
+  outline: 1px solid var(--main-text-color);
+}
+
+.link:focus-visible {
+  border: none;
+  outline: 1px solid var(--main-text-color);
+}
+
 .card-list {
   display: flex;
   flex-direction: column;
-  gap: 20px
+  gap: 20px;
 }
 
 .card__title {
@@ -236,7 +232,6 @@ a:focus-visible {
 }
 
 /*Блок с картинками*/
-
 .raise-focus-images__card-list {
   display: grid;
   gap: 10px;
@@ -248,7 +243,6 @@ a:focus-visible {
 }
 
 /*галерея*/
-
 .gallery__image-list {
   display: grid;
   gap: 10px;
@@ -261,7 +255,6 @@ a:focus-visible {
 }
 
 /*footer*/
-
 .footer {
   position: relative;
   display: grid;
@@ -278,11 +271,10 @@ a:focus-visible {
   line-height: 99%;
 }
 
-
 @media (width >= 768px) {
   .header,
   .main {
-     margin-bottom: 60px;
+    margin-bottom: 60px;
   }
 
   .heading {
@@ -290,11 +282,12 @@ a:focus-visible {
   }
 
   .header {
-    max-height: 1024px;
-    grid-template-rows: 463px min-content 462px;
+    min-height: 1024px;
+    grid-template-rows: 1fr min-content 1fr;
   }
-  
-  .decorated-zone::before, .decorated-zone::after {
+
+  .decorated-zone::before,
+  .decorated-zone::after {
     margin: 20px;
   }
 
@@ -312,7 +305,7 @@ a:focus-visible {
   }
 
   .header__subtitle {
-    width: 364px;
+    width: 50%;
     margin-top: 0px;
     align-self: center;
     margin-bottom: 25px;
@@ -320,14 +313,14 @@ a:focus-visible {
 
   .hard-focus {
     display: grid;
-    grid-template-columns:  1fr 2fr;
+    grid-template-columns: 1fr 2fr;
     gap: 20px;
     padding-bottom: 30px;
   }
 
   .low-focus {
     display: grid;
-    grid-template-columns:  1fr 2fr;
+    grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
     gap: 20px;
     padding-bottom: 30px;
@@ -339,7 +332,7 @@ a:focus-visible {
 
   .raise-focus {
     display: grid;
-    grid-template-columns:  1fr 2fr;
+    grid-template-columns: 1fr 2fr;
     gap: 20px;
     padding-bottom: 30px;
   }
@@ -374,8 +367,7 @@ a:focus-visible {
 
 @media (width >= 1024px) {
   .header {
-    max-height: 768px;
-    grid-template-rows: 319px min-content 318px;
+    min-height: 768px;
   }
 
   .header__theme-menu {
@@ -389,7 +381,7 @@ a:focus-visible {
   }
 
   .header__subtitle {
-    width: 491px;
+    max-width: 491px;
   }
 
   .hard-focus {
@@ -402,19 +394,9 @@ a:focus-visible {
 
   .low-focus__card-list {
     display: grid;
-    grid-template-columns:  repeat(3, 1fr);
-    gap: 20px
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
-
-  .footer {
-    grid-template-rows: min(768px);
-    margin-bottom: -5px;
-  }
-
-  .footer__title {
-      font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  }
-
   .image-item:nth-of-type(3) {
     grid-row: span 2;
     height: calc(100% - 5px);
@@ -424,5 +406,14 @@ a:focus-visible {
     margin-top: 5px;
     grid-column: span 2;
     height: calc(100% - 10px);
+  }
+
+  .footer {
+    margin-top: -5px;
+    grid-template-rows: min(768px);
+  }
+
+  .footer__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }

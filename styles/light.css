@@ -3,21 +3,18 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-
-
-
 .page.theme_light {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-    --header-color: #FFC2E6;
-    --main-text-color: #353430;
-    --accent-text-color: #353430;
-    --accent-color-v2: #353430;
-    --accent-color: #FF0070;
-    --background-color: #FF8DCB;
-    --background-image: url(../images/cover-image-light.png);
+  --header-color: #ffc2e6;
+  --main-text-color: #353430;
+  --accent-text-color: #353430;
+  --accent-color-v2: #353430;
+  --accent-color: #ff0070;
+  --background-color: #ff8dcb;
+  --background-image: url(../images/cover-image-light.png);
 }
 
 .page.theme_light .header__record {
@@ -52,16 +49,12 @@
 @media (prefers-color-scheme: light) {
   :root {
     /* Дублируем переменные светлой темы */
-        --header-color: #FFC2E6;
-        --main-text-color: #353430;
-        --accent-text-color: var(--main-text-color);
-        --accent-color-v2: var(--main-text-color);
-        --accent-color: #FF0070;
-        --background-color: #FF8DCB;
-        --background-image: url(../images/cover-image-light.png);
-    }
+    --header-color: #ffc2e6;
+    --main-text-color: #353430;
+    --accent-text-color: var(--main-text-color);
+    --accent-color-v2: var(--main-text-color);
+    --accent-color: #ff0070;
+    --background-color: #ff8dcb;
+    --background-image: url(../images/cover-image-light.png);
+  }
 }
-
-
-
-
